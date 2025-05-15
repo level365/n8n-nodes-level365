@@ -3,6 +3,7 @@ import { CallOperations } from './resources/call';
 import { QueueOperations } from './resources/queue';
 import { UserOperations } from './resources/user';
 import { NumberOperations } from './resources/number';
+import { DialPlanOperations } from './resources/dialplan';
 
 export class level365 implements INodeType {
     description: INodeTypeDescription = {
@@ -67,6 +68,10 @@ export class level365 implements INodeType {
                         value: 'call',
                     },
                     {
+                        name: 'Dial Plan',
+                        value: 'dialplan',
+                    },
+                    {
                         name: 'Phone Number',
                         value: 'number',
                     },
@@ -87,6 +92,7 @@ export class level365 implements INodeType {
                 // },
             },
             ...CallOperations,
+            ...DialPlanOperations,
             ...NumberOperations,
             ...QueueOperations,
             ...UserOperations,
