@@ -1,6 +1,7 @@
 import {
 
-    INodeProperties, } from 'n8n-workflow';
+    INodeProperties,
+} from 'n8n-workflow';
 
 export const UserOperations: INodeProperties[] = [
     {
@@ -30,7 +31,7 @@ export const UserOperations: INodeProperties[] = [
                 name: 'Get All Users',
                 value: 'get-all-users',
                 action: 'Get all users',
-                description: 'Returns extended information about the users subscription',
+                description: 'Returns all users in the specified domain',
                 routing: {
                     request: {
                         method: 'GET',

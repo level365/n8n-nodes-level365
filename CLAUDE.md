@@ -59,6 +59,8 @@ To test the node locally with n8n:
 3. Navigate to your n8n installation directory and run: `npm link n8n-nodes-level365`
 4. Restart n8n
 
+`pnpm run build && pnpm link`
+
 ## Node Usage
 
 When using this node in n8n:
