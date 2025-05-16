@@ -28,7 +28,6 @@ export class level365 implements INodeType {
         ],
         requestDefaults: {
             baseURL: 'https://api.365sip.com/ns-api/v2',
-            // baseURL: '	https://webhook.site/n8n-test',
             headers: {
                 Accept: 'application/json',
                 'Content-Type': 'application/json',
@@ -41,17 +40,18 @@ export class level365 implements INodeType {
                 name: 'notice',
                 type: 'notice',
                 default: '',
-            },            {
+            }, {
                 displayName: 'Domain',
                 name: 'domain',
                 type: 'string',
                 required: true,
-                description: 'The domain of your account on Level365',
+                description: 'The domain of your account on Level365. A ~ character will be replaced with your domain name in most cases.',
                 default: '~',
+                hint: 'Enter your domain here. A ~ character will be replaced with your domain name in most cases.',
                 routing: {
                     request: {
                         url: '=/domains/{{$value}}',
-                      
+
                     }
                 },
 
@@ -62,6 +62,7 @@ export class level365 implements INodeType {
                 name: 'resource',
                 type: 'options',
                 noDataExpression: true,
+                hint: 'Select the resource you want to retrieve.',
                 options: [
                     {
                         name: 'Call',
