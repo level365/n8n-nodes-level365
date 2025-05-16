@@ -44,3 +44,11 @@ _By the time users are looking for community nodes, they probably already know n
 ## Version history
 
 _This is another optional section. If your node has multiple versions, include a short description of available versions and what changed, as well as any compatibility impact._
+
+### 0.1.0 Initial Commit
+
+Initial commit to github
+
+### 0.1.1 Code Refactoring
+
+Refactoring existing code for consistency
