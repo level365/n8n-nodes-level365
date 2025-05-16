@@ -1,4 +1,4 @@
-# n8n-nodes-_node-name_
+# n8n-nodes-level365
 
 This is an n8n community node. It lets you use Level365 UCaaS Servces in your n8n workflows.
 
@@ -24,7 +24,7 @@ _List the operations supported by your node._
 
 ## Credentials
 
-_If users need to authenticate with the app/service, provide details here. You should include prerequisites (such as signing up with the service), available authentication methods, and how to set them up._
+The Level365 n8n node requires an API Key to function.  This key can be provided by Level365 support (<support@level365.com>).
 
 ## Compatibility
 
