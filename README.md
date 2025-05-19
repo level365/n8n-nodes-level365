@@ -8,11 +8,11 @@ Level365 is a unified communications company that integrates voice, video, SMS, 
 
 [Installation](#installation)  
 [Operations](#operations)  
-[Credentials](#credentials)  <!-- delete if no auth needed -->  
+[Credentials](#credentials)
 [Compatibility](#compatibility)  
 [Usage](#usage)  <!-- delete if not using this section -->  
 [Resources](#resources)  
-[Version history](#version-history)  <!-- delete if not using this section -->  
+[Version history](#version-history)
 
 ## Installation
 
@@ -22,13 +22,39 @@ Follow the [installation guide](https://docs.n8n.io/integrations/community-nodes
 
 _List the operations supported by your node._
 
+### Calls
+
+* Get Call
+* Get All Calls
+* Get Call Recording
+
+### User
+
+* Get User Info
+* Get All Users
+
+### Queue
+
+* Get Queue Info
+* Get All Queues
+
+### Phone Number
+
+* Get Number Info
+* Get All Numbers
+
+### Dial Plan
+
+* Get Dial Plan
+* Get All Dial Plans
+
 ## Credentials
 
 The Level365 n8n node requires an API Key to function.  This key can be provided by Level365 support (<support@level365.com>).
 
 ## Compatibility
 
-_State the minimum n8n version, as well as which versions you test against. You can also include any known version incompatibility issues._
+Tested with n8n version 1.85.4 and 1.92.2
 
 ## Usage
 
