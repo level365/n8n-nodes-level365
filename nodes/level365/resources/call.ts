@@ -25,6 +25,7 @@ export const CallOperations: INodeProperties[] = [
                         url: '={{"/domains/" + $parameter["domain"] + "/cdrs"}}',
                         qs: {
                             id: '={{$parameter["call_id"]}}',
+                            type: '={{$parameter["additionalFields"]["type"]}}'
                         },
                     },
                 },
@@ -39,8 +40,9 @@ export const CallOperations: INodeProperties[] = [
                         method: 'GET',
                         url: '={{"/domains/" + $parameter["domain"] + "/cdrs"}}',
                         qs: {
-                            user: '={{$parameter["user"]}}',
+                            user: '={{$parameter["additionalFields"]["user"]}}',
                             limit: '={{$parameter.limit}}',
+                            type: '={{$parameter["additionalFields"]["type"]}}'
                         },
                     },
                 },
@@ -71,11 +73,10 @@ export const CallOperations: INodeProperties[] = [
         type: 'number',
         typeOptions: {
             minValue: 1,
-            maxValue: 1000,
             numberPrecision: 0,
         },
 
-        default: 100,
+        default: 50,
         description: 'Max number of results to return',
         displayOptions: {
             show: {
@@ -83,18 +84,18 @@ export const CallOperations: INodeProperties[] = [
             },
         },
     },
-    {
-        displayName: 'Extension',
-        name: 'user',
-        type: 'string',
-        default: '',
-        description: 'Extension of user to look up',
-        displayOptions: {
-            show: {
-                operation: ['get-all-calls'],
-            },
-        },
-    },
+    // {
+    //     displayName: 'Extension',
+    //     name: 'user',
+    //     type: 'string',
+    //     default: '',
+    //     description: 'Extension of user to look up',
+    //     displayOptions: {
+    //         show: {
+    //             operation: ['get-all-calls'],
+    //         },
+    //     },
+    // },
     {
         displayName: 'Call ID',
         name: 'call_id',
@@ -121,5 +122,62 @@ export const CallOperations: INodeProperties[] = [
         },
         required: true,
     },
-
+    // Additional fields
+    {
+        displayName: 'Additional Fields',
+        name: 'additionalFields',
+        type: 'collection',
+        default: {},
+        placeholder: 'Add Fields',
+        displayOptions: {
+            show: {
+                resource: ['call'],
+                // operation: ['get-all-calls']
+            },
+        },
+        options: [
+            {
+                displayName: 'Extension',
+                description: 'Extension of user to look up',
+                name: 'user',
+                type: 'string',
+                default: '',
+                displayOptions: {
+                    show: {
+                        '/operation': ['get-all-calls'],
+                    },
+                },
+            },
+            {
+                displayName: 'Call Type',
+                description: 'Show only the selected call type',
+                name: 'type',
+                type: 'options',
+                options: [
+                    {
+                        name: 'Inbound',
+                        value: '0',
+                    },
+                    {
+                        name: 'Outbound',
+                        value: '1',
+                    },
+                    {
+                        name: 'Missed',
+                        value: '2',
+                    },
+                    {
+                        name: 'On-Net',
+                        value: '3',
+                    },
+                ],
+                default: '',
+                displayOptions: {
+                    show: {
+                        '/operation': ['get-call', 'get-all-calls'],
+                    }
+                },
+            },
+        ],
+    },
 ];
