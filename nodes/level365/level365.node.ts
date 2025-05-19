@@ -4,6 +4,7 @@ import { QueueOperations } from './resources/queue';
 import { UserOperations } from './resources/user';
 import { NumberOperations } from './resources/number';
 import { DialPlanOperations } from './resources/dialplan';
+import { DomainOperations } from './resources/domain';
 
 export class level365 implements INodeType {
     description: INodeTypeDescription = {
@@ -84,6 +85,10 @@ export class level365 implements INodeType {
                         name: 'Queue',
                         value: 'queue',
                     },
+                    {
+                        name: 'Domain',
+                        value: 'domain',
+                    },
                 ],
                 default: 'user',
                 // routing: {
@@ -97,6 +102,7 @@ export class level365 implements INodeType {
             ...NumberOperations,
             ...QueueOperations,
             ...UserOperations,
+            ...DomainOperations,
 
         ]
 
