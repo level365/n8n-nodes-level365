@@ -13,10 +13,10 @@ export class level365Api implements ICredentialType {
     documentationUrl = 'https://level365-api-v2.readme.io/reference/';
     properties: INodeProperties[] = [
         {
-            displayName: 'API Key 1',
+            displayName: 'API Key',
             name: 'apiKey',
             type: 'string',
-												typeOptions: { password: true },
+            typeOptions: { password: true },
             default: '',
         },
     ];

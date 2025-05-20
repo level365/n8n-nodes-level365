@@ -41,7 +41,8 @@ export class level365 implements INodeType {
                 name: 'notice',
                 type: 'notice',
                 default: '',
-            }, {
+            },
+            {
                 displayName: 'Domain',
                 name: 'domain',
                 type: 'string',
@@ -55,8 +56,6 @@ export class level365 implements INodeType {
 
                     }
                 },
-
-                // Operations will go here
             },
             {
                 displayName: 'Resource',

@@ -27,9 +27,9 @@ export const DomainOperations: INodeProperties[] = [
                 },
             },
             {
-                name: 'Get Domain Info + Billing Info',
-                value: 'get-domain-info-billing-info',
-                action: 'Get domain info + billing info',
+                name: 'Get Domain Info + Usage Info',
+                value: 'get-domain-info-usage-info',
+                action: 'Get domain info + usage info',
                 description: 'Returns information about the specified domain',
                 routing: {
                     request: {
@@ -54,7 +54,6 @@ export const DomainOperations: INodeProperties[] = [
                                 type: 'set',
                                 properties: {
                                     value: '={{ $response.body.total === 1 ? true : false }}'
-                                    // value: '={{ $response.body.total }}'
                                 },
                             },
                         ],

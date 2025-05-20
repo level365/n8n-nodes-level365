@@ -24,7 +24,7 @@ export const CallOperations: INodeProperties[] = [
                         method: 'GET',
                         url: '={{"/domains/" + $parameter["domain"] + "/cdrs"}}',
                         qs: {
-                            id: '={{$parameter["call_id"]}}',
+                            id: '={{$parameter["cdr_id"]}}',
                             type: '={{$parameter["additionalFields"]["type"]}}'
                         },
                     },
@@ -84,18 +84,6 @@ export const CallOperations: INodeProperties[] = [
             },
         },
     },
-    // {
-    //     displayName: 'Extension',
-    //     name: 'user',
-    //     type: 'string',
-    //     default: '',
-    //     description: 'Extension of user to look up',
-    //     displayOptions: {
-    //         show: {
-    //             operation: ['get-all-calls'],
-    //         },
-    //     },
-    // },
     {
         displayName: 'Call ID',
         name: 'call_id',
