@@ -1,5 +1,5 @@
 {
-  "name": "n8n-nodes-level365",
+  "name": "@level365/n8n-nodes-level365",
   "version": "0.1.1",
   "description": "Level365 API n8n node package",
   "keywords": [
@@ -9,11 +9,12 @@
   "homepage": "https://level365.com",
   "author": {
     "name": "Level365",
-    "email": "support@level365.com"
+    "email": "support@level365.com",
+    "url": "https://level365.com"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/level365/n8n-nodes-level365.git"
+    "url": "git+https://github.com/level365/n8n-nodes-level365.git"
   },
   "engines": {
     "node": ">=18.10",
@@ -58,5 +59,8 @@
     "n8n": "^1.84.3",
     "sqlite3": "^5.1.7",
     "tslib": "2.6.2"
+  },
+  "bugs": {
+    "url": "https://github.com/level365/n8n-nodes-level365/issues"
   }
 }

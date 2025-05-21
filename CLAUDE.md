@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is an n8n node package for Level365 API integration. It allows n8n workflows to interact with Level365's telephony system to retrieve call records, call recordings, and user information.
+This is an n8n node package for Level365 API integration. It allows n8n workflows to interact with Level365's telephony system to retrieve call records, call recordings, user information, queue data, phone numbers, dial plans, and domain details.
 
 ## Key Files and Structure
 
@@ -13,7 +13,10 @@ This is an n8n node package for Level365 API integration. It allows n8n workflow
 - `nodes/level365/resources/` - Contains operation definitions for different API resources:
   - `call.ts` - Call-related operations (get call, get all calls, get call recording)
   - `user.ts` - User-related operations (get user info, get all users)
-  - `queue.ts` - Queue-related operations (appears to be incomplete)
+  - `queue.ts` - Queue-related operations (get queue info, get all queues)
+  - `number.ts` - Phone number operations (get number info, get all numbers)
+  - `dialplan.ts` - Dial plan operations (get dial plan, get all dial plans)
+  - `domain.ts` - Domain operations (get domain info, get domain with usage info, check if domain exists)
 
 ## API Details
 
@@ -22,8 +25,12 @@ This is an n8n node package for Level365 API integration. It allows n8n workflow
 - Reference Documentation: <https://core1-dev.365sip.com/ns-api/webroot/openapi/>
 - OpenAPI Spec: <https://core1-dev.365sip.com/ns-api/webroot/openapi/openapi.php>
 - Resources:
-  - Calls: `/call/{call_id}`, `/domains/{domain}/cdrs`, `/history/{history_item_id}/audio`
+  - Calls: `/call/{call_id}`, `/domains/{domain}/cdrs`, `/domains/{domain}/recordings/{call_id}`
   - Users: `/domains/{domain}/users/{exten}`, `/domains/{domain}/users`
+  - Queues: `/domains/{domain}/callqueues/{queue}`, `/domains/{domain}/callqueues`
+  - Phone Numbers: `/domains/{domain}/phonenumbers/{number}`, `/domains/{domain}/phonenumbers`
+  - Dial Plans: `/domains/{domain}/dialplans/{dialplan}/dialrules/{dialplan_id}`, `/domains/{domain}/dialplans/{dialplan}/dialrules`
+  - Domains: `/domains/{domain}`, `/domains/{domain}/billing`, `/domains/{domain}/count`
 
 ## Development Commands
 

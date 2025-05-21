@@ -50,8 +50,8 @@ export const CallOperations: INodeProperties[] = [
             {
                 name: 'Get Call Recording',
                 value: 'get-call-recording',
-                action: 'Download call recording',
-                description: 'Downloads the call recording of a specific call',
+                action: 'Get call recording',
+                description: 'Get the call recording details of a specific call',
                 routing: {
                     request: {
                         method: 'GET',
