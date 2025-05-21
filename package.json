@@ -1,9 +1,9 @@
 {
   "name": "@level365/n8n-nodes-level365",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Level365 API n8n node package",
   "keywords": [
-    "n8n-community-node-package"
+    "n8n-community-node-package", "level365", "voip", "ucaas", "sip"
   ],
   "license": "MIT",
   "homepage": "https://level365.com",
