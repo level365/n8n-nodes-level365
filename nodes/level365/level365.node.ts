@@ -73,20 +73,20 @@ export class level365 implements INodeType {
                         value: 'dialplan',
                     },
                     {
-                        name: 'Phone Number',
-                        value: 'number',
+                        name: 'Domain',
+                        value: 'domain',
                     },
                     {
-                        name: 'User',
-                        value: 'user',
+                        name: 'Phone Number',
+                        value: 'number',
                     },
                     {
                         name: 'Queue',
                         value: 'queue',
                     },
                     {
-                        name: 'Domain',
-                        value: 'domain',
+                        name: 'User',
+                        value: 'user',
                     },
                 ],
                 default: 'user',

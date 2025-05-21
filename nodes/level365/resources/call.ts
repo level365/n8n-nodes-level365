@@ -159,7 +159,7 @@ export const CallOperations: INodeProperties[] = [
                         value: '3',
                     },
                 ],
-                default: '',
+                default: '0',
                 displayOptions: {
                     show: {
                         '/operation': ['get-call', 'get-all-calls'],
