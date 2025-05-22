@@ -26,6 +26,16 @@ export const NumberOperations: INodeProperties[] = [
                         returnFullResponse: true,
                         ignoreHttpStatusErrors: true,
                     },
+                    output: {
+                        postReceive: [
+                            {
+                                type: 'set',
+                                properties: {
+                                    value: '={{ { statusCode: $response.statusCode, body: $response.body } }}'
+                                },
+                            },
+                        ],
+                    },
                 },
             },
             {
@@ -39,6 +49,16 @@ export const NumberOperations: INodeProperties[] = [
                         url: '={{"/domains/" + $parameter["domain"] + "/phonenumbers"}}',
                         returnFullResponse: true,
                         ignoreHttpStatusErrors: true,
+                    },
+                    output: {
+                        postReceive: [
+                            {
+                                type: 'set',
+                                properties: {
+                                    value: '={{ { statusCode: $response.statusCode, body: $response.body } }}'
+                                },
+                            },
+                        ],
                     },
                 },
             },

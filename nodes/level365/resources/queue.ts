@@ -26,6 +26,16 @@ export const QueueOperations: INodeProperties[] = [
                         returnFullResponse: true,
                         ignoreHttpStatusErrors: true,
                     },
+                    output: {
+                        postReceive: [
+                            {
+                                type: 'set',
+                                properties: {
+                                    value: '={{ { statusCode: $response.statusCode, body: $response.body } }}'
+                                },
+                            },
+                        ],
+                    },
                 },
             },
             {
@@ -39,6 +49,16 @@ export const QueueOperations: INodeProperties[] = [
                         url: '={{"/domains/" + $parameter["domain"] + "/callqueues"}}',
                         returnFullResponse: true,
                         ignoreHttpStatusErrors: true,
+                    },
+                    output: {
+                        postReceive: [
+                            {
+                                type: 'set',
+                                properties: {
+                                    value: '={{ { statusCode: $response.statusCode, body: $response.body } }}'
+                                },
+                            },
+                        ],
                     },
                 },
             },

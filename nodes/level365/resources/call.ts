@@ -30,6 +30,16 @@ export const CallOperations: INodeProperties[] = [
                         returnFullResponse: true,
                         ignoreHttpStatusErrors: true,
                     },
+                    output: {
+                        postReceive: [
+                            {
+                                type: 'set',
+                                properties: {
+                                    value: '={{ { statusCode: $response.statusCode, body: $response.body } }}'
+                                },
+                            },
+                        ],
+                    },
                 },
             },
             {
@@ -49,6 +59,16 @@ export const CallOperations: INodeProperties[] = [
                         returnFullResponse: true,
                         ignoreHttpStatusErrors: true,
                     },
+                    output: {
+                        postReceive: [
+                            {
+                                type: 'set',
+                                properties: {
+                                    value: '={{ { statusCode: $response.statusCode, body: $response.body } }}'
+                                },
+                            },
+                        ],
+                    },
                 },
             },
             {
@@ -62,9 +82,17 @@ export const CallOperations: INodeProperties[] = [
                         url: '={{"/domains/" + $parameter["domain"] + "/recordings/" + $parameter["call_id"]}}',
                         returnFullResponse: true,
                         ignoreHttpStatusErrors: true,
-
                     },
-
+                    output: {
+                        postReceive: [
+                            {
+                                type: 'set',
+                                properties: {
+                                    value: '={{ { statusCode: $response.statusCode, body: $response.body } }}'
+                                },
+                            },
+                        ],
+                    },
                 },
             },
         ],

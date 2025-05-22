@@ -27,6 +27,16 @@ export const UserOperations: INodeProperties[] = [
                         returnFullResponse: true,
                         ignoreHttpStatusErrors: true,
                     },
+                    output: {
+                        postReceive: [
+                            {
+                                type: 'set',
+                                properties: {
+                                    value: '={{ { statusCode: $response.statusCode, body: $response.body } }}'
+                                },
+                            },
+                        ],
+                    },
                 },
             },
             {
@@ -40,6 +50,16 @@ export const UserOperations: INodeProperties[] = [
                         url: '={{"/domains/" + $parameter["domain"] + "/users"}}',
                         returnFullResponse: true,
                         ignoreHttpStatusErrors: true,
+                    },
+                    output: {
+                        postReceive: [
+                            {
+                                type: 'set',
+                                properties: {
+                                    value: '={{ { statusCode: $response.statusCode, body: $response.body } }}'
+                                },
+                            },
+                        ],
                     },
                 },
             },

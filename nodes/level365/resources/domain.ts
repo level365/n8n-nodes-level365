@@ -26,6 +26,16 @@ export const DomainOperations: INodeProperties[] = [
                         returnFullResponse: true,
                         ignoreHttpStatusErrors: true,
                     },
+                    output: {
+                        postReceive: [
+                            {
+                                type: 'set',
+                                properties: {
+                                    value: '={{ { statusCode: $response.statusCode, body: $response.body } }}'
+                                },
+                            },
+                        ],
+                    },
                 },
             },
             {
@@ -39,6 +49,16 @@ export const DomainOperations: INodeProperties[] = [
                         url: '={{"/domains/" + $parameter["domain"] + "/billing"}}',
                         returnFullResponse: true,
                         ignoreHttpStatusErrors: true,
+                    },
+                    output: {
+                        postReceive: [
+                            {
+                                type: 'set',
+                                properties: {
+                                    value: '={{ { statusCode: $response.statusCode, body: $response.body } }}'
+                                },
+                            },
+                        ],
                     },
                 },
             },
@@ -59,7 +79,7 @@ export const DomainOperations: INodeProperties[] = [
                             {
                                 type: 'set',
                                 properties: {
-                                    value: '={{ $response.body.total === 1 ? true : false }}'
+                                    value: '={{ { statusCode: $response.statusCode, exists: $response.body.total === 1 ? true : false, body: $response.body } }}'
                                 },
                             },
                         ],
