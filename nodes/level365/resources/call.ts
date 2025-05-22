@@ -28,6 +28,7 @@ export const CallOperations: INodeProperties[] = [
                             type: '={{$parameter["additionalFields"]["type"]}}'
                         },
                         returnFullResponse: true,
+                        ignoreHttpStatusErrors: true,
                     },
                 },
             },
@@ -46,6 +47,7 @@ export const CallOperations: INodeProperties[] = [
                             type: '={{$parameter["additionalFields"]["type"]}}'
                         },
                         returnFullResponse: true,
+                        ignoreHttpStatusErrors: true,
                     },
                 },
             },
@@ -59,6 +61,7 @@ export const CallOperations: INodeProperties[] = [
                         method: 'GET',
                         url: '={{"/domains/" + $parameter["domain"] + "/recordings/" + $parameter["call_id"]}}',
                         returnFullResponse: true,
+                        ignoreHttpStatusErrors: true,
 
                     },
 
