@@ -23,6 +23,7 @@ export const NumberOperations: INodeProperties[] = [
                     request: {
                         method: 'GET',
                         url: '={{"/domains/" + $parameter["domain"] + "/phonenumbers/" + $parameter["number"]}}',
+                        returnFullResponse: true,
                     },
                 },
             },
@@ -35,6 +36,7 @@ export const NumberOperations: INodeProperties[] = [
                     request: {
                         method: 'GET',
                         url: '={{"/domains/" + $parameter["domain"] + "/phonenumbers"}}',
+                        returnFullResponse: true,
                     },
                 },
             },

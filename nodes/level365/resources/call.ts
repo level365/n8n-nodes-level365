@@ -27,6 +27,7 @@ export const CallOperations: INodeProperties[] = [
                             id: '={{$parameter["cdr_id"]}}',
                             type: '={{$parameter["additionalFields"]["type"]}}'
                         },
+                        returnFullResponse: true,
                     },
                 },
             },
@@ -44,6 +45,7 @@ export const CallOperations: INodeProperties[] = [
                             limit: '={{$parameter.limit}}',
                             type: '={{$parameter["additionalFields"]["type"]}}'
                         },
+                        returnFullResponse: true,
                     },
                 },
             },

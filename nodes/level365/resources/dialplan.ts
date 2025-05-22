@@ -23,6 +23,7 @@ export const DialPlanOperations: INodeProperties[] = [
                     request: {
                         method: 'GET',
                         url: '={{"/domains/" + $parameter["domain"] + "/dialplans/" + $parameter["dialplan"] + "/dialrules/" + $parameter["dialplan_id"]}}',
+                        returnFullResponse: true,
                     },
                 },
             },
@@ -35,6 +36,7 @@ export const DialPlanOperations: INodeProperties[] = [
                     request: {
                         method: 'GET',
                         url: '={{"/domains/" + $parameter["domain"] + "/dialplans/" + $parameter["dialplan"] + "/dialrules"}}',
+                        returnFullResponse: true,
                     },
                 },
             },

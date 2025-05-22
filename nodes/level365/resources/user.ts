@@ -24,6 +24,7 @@ export const UserOperations: INodeProperties[] = [
                     request: {
                         method: 'GET',
                         url: '={{"/domains/" + $parameter["domain"] + "/users/" + $parameter["exten"]}}',
+                        returnFullResponse: true,
                     },
                 },
             },
@@ -36,6 +37,7 @@ export const UserOperations: INodeProperties[] = [
                     request: {
                         method: 'GET',
                         url: '={{"/domains/" + $parameter["domain"] + "/users"}}',
+                        returnFullResponse: true,
                     },
                 },
             },

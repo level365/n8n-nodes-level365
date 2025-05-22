@@ -23,6 +23,7 @@ export const QueueOperations: INodeProperties[] = [
                     request: {
                         method: 'GET',
                         url: '={{"/domains/" + $parameter["domain"] + "/callqueues/" + $parameter["queue"]}}',
+                        returnFullResponse: true,
                     },
                 },
             },
@@ -35,6 +36,7 @@ export const QueueOperations: INodeProperties[] = [
                     request: {
                         method: 'GET',
                         url: '={{"/domains/" + $parameter["domain"] + "/callqueues"}}',
+                        returnFullResponse: true,
                     },
                 },
             },

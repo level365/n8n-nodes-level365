@@ -23,6 +23,7 @@ export const DomainOperations: INodeProperties[] = [
                     request: {
                         method: 'GET',
                         url: '={{"/domains/" + $parameter["domain"]}}',
+                        returnFullResponse: true,
                     },
                 },
             },
@@ -35,6 +36,7 @@ export const DomainOperations: INodeProperties[] = [
                     request: {
                         method: 'GET',
                         url: '={{"/domains/" + $parameter["domain"] + "/billing"}}',
+                        returnFullResponse: true,
                     },
                 },
             },
@@ -47,6 +49,7 @@ export const DomainOperations: INodeProperties[] = [
                     request: {
                         method: 'GET',
                         url: '={{"/domains/" + $parameter["domain"] + "/count"}}',
+                        returnFullResponse: true,
                     },
                     output: {
                         postReceive: [
