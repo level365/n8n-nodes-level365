@@ -3,7 +3,11 @@
   "version": "0.1.14",
   "description": "Level365 API n8n node package",
   "keywords": [
-    "n8n-community-node-package", "level365", "voip", "ucaas", "sip"
+    "n8n-community-node-package",
+    "level365",
+    "voip",
+    "ucaas",
+    "sip"
   ],
   "license": "MIT",
   "homepage": "https://level365.com",
@@ -45,18 +49,18 @@
     ]
   },
   "devDependencies": {
-    "@typescript-eslint/parser": "^7.15.0",
-    "eslint": "^8.57.0",
-    "eslint-plugin-n8n-nodes-base": "^1.16.1",
+    "@typescript-eslint/parser": "^8.32.1",
+    "@typescript-eslint/utils": "^8.32.1",
+    "eslint": "^9.27.0",
+    "eslint-plugin-n8n-nodes-base": "^1.16.3",
     "gulp": "^4.0.2",
     "prettier": "^3.3.2",
-    "typescript": "^5.5.3"
+    "typescript": "^5.8.3"
   },
   "peerDependencies": {
     "n8n-workflow": "*"
   },
   "dependencies": {
-    "n8n": "^1.84.3",
     "libphonenumber-js": "^1.11.10"
   },
   "bugs": {

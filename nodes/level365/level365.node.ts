@@ -1,4 +1,4 @@
-import { INodeType, INodeTypeDescription } from 'n8n-workflow';
+import { INodeType, INodeTypeDescription, NodeConnectionType, } from 'n8n-workflow';
 import { CallOperations } from './resources/call';
 import { QueueOperations } from './resources/queue';
 import { UserOperations } from './resources/user';
@@ -19,8 +19,8 @@ export class level365 implements INodeType {
         defaults: {
             name: 'Level365',
         },
-        inputs: ['main'],
-        outputs: ['main'],
+        inputs: [NodeConnectionType.Main],
+        outputs: [NodeConnectionType.Main],
         credentials: [
             {
                 name: 'level365Api',
