@@ -1,6 +1,6 @@
 {
   "name": "@level365/n8n-nodes-level365",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "Level365 API n8n node package",
   "keywords": [
     "n8n-community-node-package", "level365", "voip", "ucaas", "sip"
@@ -40,7 +40,8 @@
       "dist/credentials/level365api.credentials.js"
     ],
     "nodes": [
-      "dist/nodes/level365/level365.node.js"
+      "dist/nodes/level365/Level365.node.js",
+      "dist/nodes/PhoneNumberFormatter/PhoneNumberFormatter.node.js"
     ]
   },
   "devDependencies": {
@@ -55,10 +56,8 @@
     "n8n-workflow": "*"
   },
   "dependencies": {
-    "mongodb": "^6.15.0",
     "n8n": "^1.84.3",
-    "sqlite3": "^5.1.7",
-    "tslib": "2.6.2"
+    "libphonenumber-js": "^1.11.10"
   },
   "bugs": {
     "url": "https://github.com/level365/n8n-nodes-level365/issues"
