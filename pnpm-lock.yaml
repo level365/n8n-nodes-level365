@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      libphonenumber-js:
+        specifier: ^1.11.10
+        version: 1.12.6
       mongodb:
         specifier: ^6.15.0
         version: 6.15.0(@aws-sdk/credential-providers@3.778.0)(gcp-metadata@5.3.0(encoding@0.1.13))(socks@2.8.4)
