@@ -20,8 +20,6 @@ Follow the [installation guide](https://docs.n8n.io/integrations/community-nodes
 
 ## Operations
 
-_List the operations supported by your node._
-
 ### Domain
 
 * Get Domain
@@ -54,13 +52,17 @@ _List the operations supported by your node._
 * Get Dial Plan
 * Get All Dial Plans
 
+### Phone Number Formatting
+
+There is also a node included for formatting phone numbers.  This allows outputting phone numbers in whatever format may be necessary for upstream platforms.
+
 ## Credentials
 
 The Level365 n8n node requires an API Key to function.  This key can be provided by Level365 support (<support@level365.com>).
 
 ## Compatibility
 
-Tested with n8n version 1.85.4 and 1.92.2
+Tested with n8n version 1.85.4 and up.
 
 ## Usage
 

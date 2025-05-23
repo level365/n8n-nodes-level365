@@ -61,9 +61,9 @@ pnpm prepublishOnly
 
 To test the node locally with n8n:
 
-1. Build the package: `pnpm build`
-2. Create a symbolic link: `npm link`
-3. Navigate to your n8n installation directory and run: `npm link n8n-nodes-level365`
+1. Build the package: `pnpm run build`
+2. Create a symbolic link: `pnpm link`
+3. Navigate to your n8n installation directory and run: `pnpm link n8n-nodes-level365`
 4. Restart n8n
 
 `pnpm run build && pnpm link`
@@ -74,6 +74,6 @@ When using this node in n8n:
 
 1. Configure the Level365 API credentials with your API key
 2. Specify the domain of your Level365 account
-3. Select the resource (Call, User, Queue, Phone Number)
+3. Select the resource (Call, User, Queue, Phone Number, etc)
 4. Choose an operation for the selected resource
 5. Fill in the required parameters for the chosen operation
